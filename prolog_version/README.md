@@ -98,41 +98,6 @@ The system can diagnose these conditions:
 - `inflammatory_arthritis`, `tension_headache`, `skin_condition`
 - `fever_unknown_cause`
 
-## Key Prolog Features Demonstrated
-
-### 1. Declarative Rules
-Instead of imperative if-then logic, Prolog uses declarative rules:
-```prolog
-possible_disease(PatientSymptoms, flu) :-
-    (has_all_symptoms(PatientSymptoms, [fever, cough]);
-     has_all_symptoms(PatientSymptoms, [fever, muscle_aches])).
-```
-
-### 2. Pattern Matching
-Sophisticated pattern matching with multiple conditions:
-```prolog
-possible_disease(PatientSymptoms, strep_throat) :-
-    has_all_symptoms(PatientSymptoms, [sore_throat, fever]),
-    not_has_symptom(PatientSymptoms, runny_nose),
-    not_has_symptom(PatientSymptoms, cough).
-```
-
-### 3. List Processing
-Native list operations for symptom checking:
-```prolog
-has_all_symptoms(PatientSymptoms, []).
-has_all_symptoms(PatientSymptoms, [Symptom|Rest]) :-
-    has_patient_symptom(PatientSymptoms, Symptom),
-    has_all_symptoms(PatientSymptoms, Rest).
-```
-
-### 4. Meta-predicates
-Using `findall/3` for collecting all solutions:
-```prolog
-predict_diseases(PatientSymptoms, Diseases) :-
-    findall(Disease, possible_disease(PatientSymptoms, Disease), DiseaseList),
-    sort(DiseaseList, Diseases).
-```
 
 ## Testing the System
 
@@ -175,36 +140,3 @@ Possible conditions:
   - migraine
 true.
 ```
-
-## Extending the System
-
-### Adding New Symptoms
-1. Add symptom fact to `knowledge_base.pl`:
-   ```prolog
-   symptom(new_symptom).
-   ```
-
-2. Associate with diseases:
-   ```prolog
-   has_symptom(some_disease, new_symptom).
-   ```
-
-### Adding New Diseases
-1. Add disease fact:
-   ```prolog
-   disease(new_disease).
-   ```
-
-2. Define symptoms:
-   ```prolog
-   has_symptom(new_disease, symptom1).
-   has_symptom(new_disease, symptom2).
-   ```
-
-3. Add diagnostic rule in `diagnosis.pl`:
-   ```prolog
-   possible_disease(PatientSymptoms, new_disease) :-
-       has_all_symptoms(PatientSymptoms, [symptom1, symptom2]).
-   ```
-
-This Prolog implementation showcases the power of declarative programming for rule-based expert systems and provides an excellent contrast to the imperative C++ approach.
