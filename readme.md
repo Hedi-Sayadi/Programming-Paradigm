@@ -88,7 +88,6 @@ Diseases = [flu, covid19].
 Programming_Paradigms/
 │
 ├── readme.md                 # Project overview (this file)
-├── COMPARISON.md             # Detailed paradigm comparison
 │
 ├── cpp_app/                  #  COMPLETE - Imperative implementation
 │   ├── main.cpp              # Console application entry point
@@ -121,3 +120,4 @@ Programming_Paradigms/
 - **Comprehensive Testing**: Built-in test suites for both implementations
 
 - **Full Documentation**: README files and code comparison guide
+
