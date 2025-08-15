@@ -65,20 +65,7 @@ Diseases = [flu, covid19].
 
 ---
 
-## 6 Project Architecture
-project/
-│
-├── cpp_app/              # Main imperative part
-│   ├── main.cpp           # Entry point
-│   ├── patient.cpp/h      # Patient class
-│   ├── diagnosis.cpp/h    # Imperative diagnosis rules
-│   └── data/              # Optional text files
-│
-└── prolog_version/        # Declarative part (standalone)
-    ├── diagnosis.pl       # Knowledge base + rules
-    └── knowledge_base.pl
-
-## 7 Technology Stack & Status
+## 6 Technology Stack & Status
 
 ###  COMPLETED - Imperative Part:
 - **C++17** with comprehensive console application
@@ -125,7 +112,6 @@ Programming_Paradigms/
 ###  Ready to Use:
 - **C++ Application**: `.\build.bat` then `.\run.bat` in cpp_app directory
 - **Prolog System**: Load `[diagnosis]` in SWI-Prolog, then query with `diagnose([fever, cough], Diseases)`
-- **Web Interface**: Open `web_interface/index.html` in any modern browser
 
 ###  Implemented Features:
 - **Complete Patient CRUD**: Create, Read, Update, Delete operations
@@ -133,4 +119,5 @@ Programming_Paradigms/
 - **Sophisticated Diagnosis**: 15+ disease conditions with complex rule combinations
 - **Dual Implementation**: Same logic in both imperative and declarative styles
 - **Comprehensive Testing**: Built-in test suites for both implementations
+
 - **Full Documentation**: README files and code comparison guide
