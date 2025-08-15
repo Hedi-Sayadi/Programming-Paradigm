@@ -3,14 +3,14 @@
 
 ---
 
-## 2nn Project Overview  
+## 2 Project Overview  
 The Medical Diagnosis App is a simple C++ application that allows healthcare staff (or patients) to store basic patient data, record their symptoms, and receive possible disease predictions based on those symptoms.  
 
 The main app is developed entirely in **C++ (imperative style)**. One of its core functionalities disease prediction based on symptoms will be reimplemented separately in a **declarative language Prolog** for comparison purposes.
 
 ---
 
-## 3nn Goals  
+## 3 Goals  
 - Provide a patient record management system.  
 - Allow symptom input for each patient.  
 - Predict possible diseases based on a predefined symptom-disease mapping.  
@@ -18,7 +18,7 @@ The main app is developed entirely in **C++ (imperative style)**. One of its cor
 
 ---
 
-## 4nn Features  
+## 4 Features  
 
 ### Part 1: C++ Implementation (Main Project)  
 **Patient Management:**  
@@ -44,7 +44,7 @@ The main app is developed entirely in **C++ (imperative style)**. One of its cor
 
 ---
 
-## 5nn Example Workflow  
+## Example Workflow  
 
 **C++ App (Main Project):**  
 1. User launches app.  
@@ -65,7 +65,7 @@ Diseases = [flu, covid19].
 
 ---
 
-## 6nn Project Architecture
+## 6 Project Architecture
 project/
 │
 ├── cpp_app/              # Main imperative part
@@ -78,7 +78,7 @@ project/
     ├── diagnosis.pl       # Knowledge base + rules
     └── knowledge_base.pl
 
-## 7nn Technology Stack & Status
+## 7 Technology Stack & Status
 
 ###  COMPLETED - Imperative Part:
 - **C++17** with comprehensive console application
